@@ -13,24 +13,24 @@
 
 <body>
 
-<font color="Silver" face="Comic Sans MS,arial">
+<font color="Silver" face="Comic Sans MS">
 		
-	<h2 align="center">Pss Cotilla!! Tenemos sindrome de portera AJAJ</h2>
+	<h2 align="center">Pss Cotilla!! Tenemos sindrome de portera ehh JAJAJ</h2>
 
-<font color="Navy" face="Comic Sans MS,arial">
-Buscar por nombre:<input type="text" id="txtBuscar"	placeholder="Escribe su nombre">
+<font color="Navy" face="Courier">
+Buscar:<input type="text" id="txtBuscar" placeholder="Escribe su nombre">
 	   <input type="button" id="btnBuscar" value="buscar" onclick="buscar()"> 
-<br />
+
 
 <a href="altaInquilino.html">Add new Tenant</a>
-<br />
+
 	   
 <table id="tblDatos">
 <c:forEach items="${inquilinos}" var="inquilino">
  <tr>
    <td>${inquilino.idInquilino}</td>
-   <td> <font color="red" face="Comic Sans MS,arial"> ${inquilino.dni}</td>
-   <td> <font color="teal" face="Comic Sans MS,arial"> ${inquilino.nombre}</td>
+   <td> <font color="red" face="Time New Roman"> ${inquilino.dni}</td>
+   <td> <font color="teal" face="Arial"> ${inquilino.nombre}</td>
    <td>${inquilino.edad}</td>
    <td>${inquilino.trabaja}</td>
    

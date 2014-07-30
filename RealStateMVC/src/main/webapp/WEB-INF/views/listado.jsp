@@ -16,18 +16,18 @@
 	<h1 align="center"><i>No se corte en utilizar nuestros servicios</i></h1>
 	<h2 align="center">y si quiere cotillear por aqui, hagalo es gratis</h2>
 	
-<font color="Navy" face="Comic Sans MS,arial">
+<font color="Navy" face="Comic Sans MS">
 Direccion:<input type="text" id="txtBuscar" placeholder="Escribe la direccion">
 	   <input type="button" id="btnBuscar" value="buscar" onclick="buscar()"> 
 
 Precio:<input type="text" id="txtBuscar" placeholder="Escribe el precio">
-	   <input type="button" id="btnBuscar" value="buscar" onclick="buscar()">
+	   <input type="button" id="btnBuscar" value="buscar" onclick="buscarPrecio()">
 	   
 
 <a href="altaInmueble.html">Add a new Property</a><br />
 
  
- <font color="blue" face="Comic Sans MS,arial">
+ <font color="blue" face="Arial">
    
    <!-- esto es la linea nueva, si falla a eliminar -->
    

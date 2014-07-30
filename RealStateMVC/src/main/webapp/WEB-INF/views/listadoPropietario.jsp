@@ -13,13 +13,13 @@
 
 <body>
 
-<font color="Silver" face="Comic Sans MS,arial">
+<font color="Silver" face="Comic Sans MS">
 		
 	<h2 align="center">Pss No tuvistes suficiente en inquilinos ehh</h2>
 
-<font color="Navy" face="Comic Sans MS,arial">
+<font color="Navy" face="Arial">
 
-Buscar por nombre:<input type="text" id="txtBuscar" placeholder="Escribe su nombre">
+Buscar:<input type="text" id="txtBuscar" placeholder="Escribe su nombre">
 	   <input type="button" id="btnBuscar" value="buscar" onclick="buscar()"> 
 <br />
 
@@ -31,8 +31,8 @@ Buscar por nombre:<input type="text" id="txtBuscar" placeholder="Escribe su nomb
  <tr>
    
    <td>${propietario.idPropietario }</td>
-   <td> <font color="teal" face="Comic Sans MS,arial"> ${propietario.nombre }</td>
-   <td> <font color="red" face="Comic Sans MS,arial"> ${propietario.dni }</td>
+   <td> <font color="teal" face="Time New Roman"> ${propietario.nombre }</td>
+   <td> <font color="red" face="Courier"> ${propietario.dni }</td>
    
    <td><a href="detallePropietario.html?id=${propietario.idPropietario}"> Ver detalle</a></td>
    <td><a href="#" id="lnkDetalle" onclick="evento(${propietario.idPropietario})">Ver Detalle en Ajax</a></td>
