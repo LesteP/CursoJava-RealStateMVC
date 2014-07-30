@@ -5,8 +5,8 @@
 	<title>Welcome to the Real State</title>
 </head>
 <body>
+<h1 align="center">Consulta nuestros inmuebles y propietarios, e inquilinos si te apetece! </h1>
 
-<h1> Consulta nuestros inmuebles y propietarios, e inquilinos si te apetece! </h1> 
 	
 
 <td><a href="listado.html"> Lista de Inmuebles</a></td>
@@ -20,7 +20,7 @@
 <br />
 
 
-<P>Y si no puedes pagar "tranquilo" lo haran tus hijos MUAHAHAHA  </P>
+<h3 align="left">Y si no puedes pagar "tranquilo" lo haran tus hijos MUAHAHAHA </h3>
 
 
 </body>
