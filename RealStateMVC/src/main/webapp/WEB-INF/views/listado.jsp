@@ -13,14 +13,15 @@
 
 <body>
 
-Buscar por direccion:<input type="text" id="txtBuscar" placeholder="Pon tu busqueda">
+Buscar por direccion:<input type="text" id="txtBuscar" placeholder="Escribe la direccion">
 	   <input type="button" id="btnBuscar" value="buscar" onclick="buscar()"> 
 
-Buscar por precio:<input type="text" id="txtBuscarPrecio" placeholder="Pon tu precio">
-	   <input type="button" id="btnBuscarPrecio" value="buscarPrecio" onclick="buscarPrecio()"><br /> 
-	   
+Buscar por precio:<input type="text" id="txtBuscarPrecio" placeholder="Escribe el precio">
+	   <input type="button" id="btnBuscarPrecio" value="buscarPrecio" onclick="buscarPrecio()">
+<br /> 	   
 
-<a href="altaInmueble.html">Añadir Inmueble</a><br />
+<a href="altaInmueble.html">Add a new Property</a><br />
+<br />
    
 <table id="tblDatos">
 <c:forEach items="${inmuebles}" var="inmueble">
@@ -51,7 +52,7 @@ function borrar(id){
 				method: "DELETE",
 				contentType: "application/json",
 				success: function(res){
-					alert("Inmueble borrado correctamente");
+					alert("Inmueble eliminado correctamente");
 					$("#txtBuscar").text("");
 					buscar();
 

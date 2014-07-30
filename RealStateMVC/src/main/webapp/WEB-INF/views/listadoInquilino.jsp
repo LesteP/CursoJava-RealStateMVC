@@ -12,14 +12,13 @@
 </head>
 
 <body>
-Buscar por nombre:<input type="text" id="txtBuscar" 
-				placeholder="Pon tu busqueda">
+Buscar por nombre:<input type="text" id="txtBuscar"	placeholder="Escribe su nombre">
 	   <input type="button" id="btnBuscar" value="buscar" onclick="buscar()"> 
 <br />
+
+<a href="altaInquilino.html">Add new Tenant</a>
 <br />
-<a href="altaInquilino.html">Añadir Inquilino</a>
-<br />
-<br />	   
+	   
 <table id="tblDatos">
 <c:forEach items="${inquilinos}" var="inquilino">
  <tr>
@@ -51,7 +50,7 @@ function borrar(id){
 				method: "DELETE",
 				contentType: "application/json",
 				success: function(res){
-					alert("Inquilino borrado correctamente");
+					alert("Inquilino felizmente desahuciado");
 					$("#txtBuscar").text("");
 					buscar();
 

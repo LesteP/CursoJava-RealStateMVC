@@ -5,14 +5,23 @@
 	<title>Welcome to the Real State</title>
 </head>
 <body>
-<h1>
-	Carne fresca pa hipotecar hasta sus nietos muahahahahaha!  
-</h1>
 
-<td><a href="listado.html"> Ver listado de Inmuebles</a></td>
-<td><a href="listadoPropietario.html"> Ver listado de Propietarios</a></td>
-<td><a href="listadoInquilino.html"> Ver listado de Inquilinos</a></td>
+<h1> Consulta nuestros inmuebles y propietarios, e inquilinos si te apetece! </h1> 
+	
 
-<P>  The time on the server is ${serverTime}. </P>
+<td><a href="listado.html"> Lista de Inmuebles</a></td>
+<br />
+<br />
+<td><a href="listadoPropietario.html"> Lista de Propietarios</a></td>
+<br />
+<br />
+<td><a href="listadoInquilino.html"> Lista de Inquilinos</a></td>
+<br />
+<br />
+
+
+<P>Y si no puedes pagar "tranquilo" lo haran tus hijos MUAHAHAHA  </P>
+
+
 </body>
 </html>

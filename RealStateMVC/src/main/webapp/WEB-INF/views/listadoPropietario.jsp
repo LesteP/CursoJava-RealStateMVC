@@ -12,11 +12,12 @@
 </head>
 
 <body>
-Buscar por nombre:<input type="text" id="txtBuscar" 
-				placeholder="Pon tu busqueda">
+Buscar por nombre:<input type="text" id="txtBuscar" placeholder="Escribe su nombre">
 	   <input type="button" id="btnBuscar" value="buscar" onclick="buscar()"> 
+<br />
 
-<a href="altaPropietario.html">Añadir Propietario</a>
+<a href="altaPropietario.html">Add new Owner</a>
+<br />
 	   
 <table id="tblDatos">
 <c:forEach items="${propietarios}" var="propietario">
@@ -24,6 +25,7 @@ Buscar por nombre:<input type="text" id="txtBuscar"
    <td>${propietario.idPropietario }</td>
    <td>${propietario.nombre }</td>
    <td>${propietario.dni }</td>
+   
    <td><a href="detallePropietario.html?id=${propietario.idPropietario}"> Ver detalle</a></td>
    <td><a href="#" id="lnkDetalle" onclick="evento(${propietario.idPropietario})">Ver Detalle en Ajax</a></td>
    <td><a href="modificarPropietario.html/${propietario.idPropietario}"> Modificar</a></td>
@@ -46,7 +48,7 @@ function borrar(id){
 				method: "DELETE",
 				contentType: "application/json",
 				success: function(res){
-					alert("Propietario borrado correctamente");
+					alert("Propietario erradicado muy satisfactoriamente MUAHAHA");
 					$("#txtBuscar").text("");
 					buscar();
 
