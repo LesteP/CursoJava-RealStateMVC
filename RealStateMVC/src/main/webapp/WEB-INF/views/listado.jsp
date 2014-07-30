@@ -10,36 +10,46 @@
 <script type="text/javascript" src ='<c:url value="/resources/js/jquery-1.11.1.min.js"/>'></script>
 <title>Lista de Inmuebles</title>
 </head>
-
 <body>
-
-Buscar por direccion:<input type="text" id="txtBuscar" placeholder="Escribe la direccion">
+<font color="Silver" face="Comic Sans MS,arial">
+	
+	<h1 align="center"><i>No se corte en utilizar nuestros servicios</i></h1>
+	<h2 align="center">y si quiere cotillear por aqui, hagalo es gratis</h2>
+	
+<font color="Navy" face="Comic Sans MS,arial">
+Direccion:<input type="text" id="txtBuscar" placeholder="Escribe la direccion">
 	   <input type="button" id="btnBuscar" value="buscar" onclick="buscar()"> 
 
-Buscar por precio:<input type="text" id="txtBuscarPrecio" placeholder="Escribe el precio">
-	   <input type="button" id="btnBuscarPrecio" value="buscarPrecio" onclick="buscarPrecio()">
-<br /> 	   
+Precio:<input type="text" id="txtBuscar" placeholder="Escribe el precio">
+	   <input type="button" id="btnBuscar" value="buscar" onclick="buscar()">
+	   
 
 <a href="altaInmueble.html">Add a new Property</a><br />
-<br />
+
+ 
+ <font color="blue" face="Comic Sans MS,arial">
+   
+   <!-- esto es la linea nueva, si falla a eliminar -->
    
 <table id="tblDatos">
-<c:forEach items="${inmuebles}" var="inmueble">
- <tr>
+ <c:forEach items="${inmuebles}" var="inmueble">
+  <tr>
    <td>${inmueble.idInmueble }</td>
-   <td>${inmueble.direccion }</td>
-   <td>${inmueble.precio }</td>
-   
+   <td> <font color="teal" face="times new roman"> ${inmueble.direccion }</td>
+   <td> <font color="red" face="Arial"> ${inmueble.precio }</td>
+       
    <td><a href="detalle.html?id=${inmueble.idInmueble}"> Ver detalle</a></td>
    <td><a href="#" id="lnkDetalle" onclick="evento(${inmueble.idInmueble})">Ver Detalle en Ajax</a></td>
    <td><a href="modificarInmueble.html/${inmueble.idInmueble}"> Modificar</a></td>
    <td><a href="#" id="lnkBorrar" onclick="borrar(${inmueble.idInmueble})">Borrar</a></td>
- 
-</tr>
+  </tr>
  </c:forEach>
-</table>
+</table>   	
+
+
 <div id="divDetalle"></div>
 <script type="text/javascript">
+
 function borrar(id){
 
 	var datos={idInmueble:id};

@@ -12,6 +12,12 @@
 </head>
 
 <body>
+
+<font color="Silver" face="Comic Sans MS,arial">
+		
+	<h2 align="center">Pss Cotilla!! Tenemos sindrome de portera AJAJ</h2>
+
+<font color="Navy" face="Comic Sans MS,arial">
 Buscar por nombre:<input type="text" id="txtBuscar"	placeholder="Escribe su nombre">
 	   <input type="button" id="btnBuscar" value="buscar" onclick="buscar()"> 
 <br />
@@ -23,8 +29,8 @@ Buscar por nombre:<input type="text" id="txtBuscar"	placeholder="Escribe su nomb
 <c:forEach items="${inquilinos}" var="inquilino">
  <tr>
    <td>${inquilino.idInquilino}</td>
-   <td>${inquilino.dni}</td>
-   <td>${inquilino.nombre}</td>
+   <td> <font color="red" face="Comic Sans MS,arial"> ${inquilino.dni}</td>
+   <td> <font color="teal" face="Comic Sans MS,arial"> ${inquilino.nombre}</td>
    <td>${inquilino.edad}</td>
    <td>${inquilino.trabaja}</td>
    

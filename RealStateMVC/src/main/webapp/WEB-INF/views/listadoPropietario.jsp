@@ -12,6 +12,13 @@
 </head>
 
 <body>
+
+<font color="Silver" face="Comic Sans MS,arial">
+		
+	<h2 align="center">Pss No tuvistes suficiente en inquilinos ehh</h2>
+
+<font color="Navy" face="Comic Sans MS,arial">
+
 Buscar por nombre:<input type="text" id="txtBuscar" placeholder="Escribe su nombre">
 	   <input type="button" id="btnBuscar" value="buscar" onclick="buscar()"> 
 <br />
@@ -22,9 +29,10 @@ Buscar por nombre:<input type="text" id="txtBuscar" placeholder="Escribe su nomb
 <table id="tblDatos">
 <c:forEach items="${propietarios}" var="propietario">
  <tr>
+   
    <td>${propietario.idPropietario }</td>
-   <td>${propietario.nombre }</td>
-   <td>${propietario.dni }</td>
+   <td> <font color="teal" face="Comic Sans MS,arial"> ${propietario.nombre }</td>
+   <td> <font color="red" face="Comic Sans MS,arial"> ${propietario.dni }</td>
    
    <td><a href="detallePropietario.html?id=${propietario.idPropietario}"> Ver detalle</a></td>
    <td><a href="#" id="lnkDetalle" onclick="evento(${propietario.idPropietario})">Ver Detalle en Ajax</a></td>
@@ -56,8 +64,6 @@ function borrar(id){
 				error: function(res){
 					alert(JSON.stringify(res));
 					}
-
-
 				}
 			);
 }
@@ -89,7 +95,6 @@ function buscar(){
 			tabla.append(h);
 			}
     });
-
 }
 function evento(id){
   	var url="propietario/"+id;
@@ -100,7 +105,7 @@ var resultado="<ul>";
    resultado+="<li>"+ res.dni+"<li>";
  $("#divDetalle").html(resultado);
   	});
-	
+
 }
 </script>
 </body>
