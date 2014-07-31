@@ -15,7 +15,7 @@
 <td><a href="listadoPropietario.html"> Lista de Propietarios</a></td><br />
 
 
-<font color="Red" face="Comic Sans MS,arial">
+<font color="Red" face="Arial">
 <h3 align="left">Y si no puedes pagar "tranquilo" lo haran tus hijos MUAHAHAHA </h3>
 
 </body>

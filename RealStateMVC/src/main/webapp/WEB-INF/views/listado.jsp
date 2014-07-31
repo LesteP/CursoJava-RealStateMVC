@@ -8,7 +8,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <script type="text/javascript" src ='<c:url value="/resources/js/jquery.js"/>'></script><!-- -1.11.1.min -->
-<title>Lista de Inmuebles</title>
+<title>Listado de Inmuebles</title>
 </head>
 <body>
 <font color="Silver" face="Comic Sans MS">
@@ -22,14 +22,10 @@ Direccion:<input type="text" id="txtBuscar" placeholder="Escribe la direccion">
 
 Precio:<input type="text" id="txtBuscarPrecio" placeholder="Escribe el precio">
 	   <input type="button" id="btnBuscar" value="buscar" onclick="buscarPrecio()">
-	   
-
+	  
 <a href="altaInmueble.html">Add a new Property</a><br />
 
  
- <font color="blue" face="Arial">
-   
-   <!-- esto es la linea nueva, si falla a eliminar -->
    
 <table id="tblDatos">
  <c:forEach items="${inmuebles}" var="inmueble">
@@ -72,8 +68,6 @@ function borrar(id){
 				error: function(res){
 					alert(JSON.stringify(res));
 					}
-
-
 				}
 			);
 }
@@ -83,14 +77,12 @@ function buscar(){
 	if(tx=="")
 		tx="NoBuscoNada";
 	var url="inmueble/buscar/"+tx;	
-
 	$.get(url,function(res){
 
 		var tabla=$("#tblDatos");
 
 		$("#tblDatos tr").each(function(){
 				$(this).remove();
-
 			});
             for(var i=0;i<res.length;i++){
 			var h="<tr>";
@@ -112,14 +104,11 @@ function buscarPrecio(){
 	if(tx=="")
 		tx="NoBuscoNada";
 	var url="inmueble/buscarPrecio/"+tx;	
-
 	$.get(url,function(res){
 
 		var tabla=$("#tblDatos");
-
 		$("#tblDatos tr").each(function(){
 				$(this).remove();
-
 			});
             for(var i=0;i<res.length;i++){
 			var h="<tr>";
@@ -134,7 +123,6 @@ function buscarPrecio(){
 			tabla.append(h);
 			}
     });
-
 }
 function evento(id){
   	var url="inmueble/"+id;
@@ -147,10 +135,7 @@ var resultado="<ul>";
    resultado+="<li>"+ res.inquilino.nombre+"<li>";
    $("#divDetalle").html(resultado);
   	});
-	
 }
-
-
 </script>
 </body>
 </html>

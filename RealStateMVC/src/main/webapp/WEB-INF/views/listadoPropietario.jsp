@@ -8,9 +8,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <script type="text/javascript" src ='<c:url value="/resources/js/jquery.js"/>'></script>
-<title>Lista de Propietarios</title>
+<title>Listado de Propietarios</title>
 </head>
-
 <body>
 
 <font color="Silver" face="Comic Sans MS">
@@ -21,10 +20,9 @@
 
 Buscar:<input type="text" id="txtBuscar" placeholder="Escribe su nombre">
 	   <input type="button" id="btnBuscar" value="buscar" onclick="buscar()"> 
-<br />
+
 
 <a href="altaPropietario.html">Add new Owner</a>
-<br />
 	   
 <table id="tblDatos">
 <c:forEach items="${propietarios}" var="propietario">
@@ -47,9 +45,7 @@ Buscar:<input type="text" id="txtBuscar" placeholder="Escribe su nombre">
 function borrar(id){
 
 	var datos={idPropietario:id};
-
 	var datosPasar=JSON.stringify(datos);
-
 	$.ajax(
 			"propietario",{
 				data:datosPasar,
@@ -73,14 +69,11 @@ function buscar(){
 	if(tx=="")
 		tx="NoBuscoNada";
 	var url="propietario/buscar/"+tx;	
-
 	$.get(url,function(res){
 
 		var tabla=$("#tblDatos");
-
 		$("#tblDatos tr").each(function(){
 				$(this).remove();
-
 			});
             for(var i=0;i<res.length;i++){
 			var h="<tr>";
@@ -103,7 +96,7 @@ var resultado="<ul>";
    resultado+="<li>"+ res.idPropietario+"<li>";
    resultado+="<li>"+ res.nombre+"<li>";
    resultado+="<li>"+ res.dni+"<li>";
- $("#divDetalle").html(resultado);
+   $("#divDetalle").html(resultado);
   	});
 
 }
