@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<script type="text/javascript" src ='<c:url value="/resources/js/jquery-1.11.1.min.js"/>'></script>
+<script type="text/javascript" src ='<c:url value="/resources/js/jquery.js"/>'></script>
 <title>Lista de Propietarios</title>
 </head>
 

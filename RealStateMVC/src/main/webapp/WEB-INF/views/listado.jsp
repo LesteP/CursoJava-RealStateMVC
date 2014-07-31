@@ -7,20 +7,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<script type="text/javascript" src ='<c:url value="/resources/js/jquery-1.11.1.min.js"/>'></script>
+<script type="text/javascript" src ='<c:url value="/resources/js/jquery.js"/>'></script><!-- -1.11.1.min -->
 <title>Lista de Inmuebles</title>
 </head>
 <body>
-<font color="Silver" face="Comic Sans MS,arial">
+<font color="Silver" face="Comic Sans MS">
 	
 	<h1 align="center"><i>No se corte en utilizar nuestros servicios</i></h1>
 	<h2 align="center">y si quiere cotillear por aqui, hagalo es gratis</h2>
 	
-<font color="Navy" face="Comic Sans MS">
+<font color="Navy" face="Verdana">
 Direccion:<input type="text" id="txtBuscar" placeholder="Escribe la direccion">
 	   <input type="button" id="btnBuscar" value="buscar" onclick="buscar()"> 
 
-Precio:<input type="text" id="txtBuscar" placeholder="Escribe el precio">
+Precio:<input type="text" id="txtBuscarPrecio" placeholder="Escribe el precio">
 	   <input type="button" id="btnBuscar" value="buscar" onclick="buscarPrecio()">
 	   
 
@@ -37,7 +37,9 @@ Precio:<input type="text" id="txtBuscar" placeholder="Escribe el precio">
    <td>${inmueble.idInmueble }</td>
    <td> <font color="teal" face="times new roman"> ${inmueble.direccion }</td>
    <td> <font color="red" face="Arial"> ${inmueble.precio }</td>
-       
+    
+    
+    	<font color="teal" face="Verdana">    
    <td><a href="detalle.html?id=${inmueble.idInmueble}"> Ver detalle</a></td>
    <td><a href="#" id="lnkDetalle" onclick="evento(${inmueble.idInmueble})">Ver Detalle en Ajax</a></td>
    <td><a href="modificarInmueble.html/${inmueble.idInmueble}"> Modificar</a></td>
@@ -147,6 +149,8 @@ var resultado="<ul>";
   	});
 	
 }
+
+
 </script>
 </body>
 </html>
