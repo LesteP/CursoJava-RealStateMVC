@@ -25,7 +25,8 @@ import org.hibernate.annotations.NamedQuery;
 @Table(name="Inquilino"
     ,catalog="teide2014"
 )
-@NamedQuery(name="Inquilino.buscador", query="from Inquilino i where i.nombre like :texto")
+@NamedQuery(name="Inquilino.buscador",
+		    query="from Inquilino i where i.nombre like :texto")
 public class Inquilino  implements java.io.Serializable {
 
 

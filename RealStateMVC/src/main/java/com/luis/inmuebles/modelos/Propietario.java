@@ -25,7 +25,8 @@ import org.hibernate.annotations.NamedQuery;
 @Table(name="Propietario"
     ,catalog="teide2014"
 )
-@NamedQuery(name="Propietario.buscador", query="from Propietario p where p.nombre like :texto")
+@NamedQuery(name="Propietario.buscador",
+			query="from Propietario p where p.nombre like :texto")
 public class Propietario  implements java.io.Serializable {
 
 
@@ -36,7 +37,6 @@ public class Propietario  implements java.io.Serializable {
 
     public Propietario() {
     }
-
 	
     public Propietario(String nombre, String dni) {
         this.nombre = nombre;
@@ -48,9 +48,7 @@ public class Propietario  implements java.io.Serializable {
        this.inmuebles = inmuebles;
     }
    
-     @Id @GeneratedValue(strategy=IDENTITY)
-
-    
+    @Id @GeneratedValue(strategy=IDENTITY)
     @Column(name="idPropietario", unique=true, nullable=false)
     public Integer getIdPropietario() {
         return this.idPropietario;
@@ -60,8 +58,7 @@ public class Propietario  implements java.io.Serializable {
         this.idPropietario = idPropietario;
     }
 
-    
-    @Column(name="nombre", nullable=false, length=45)
+        @Column(name="nombre", nullable=false, length=45)
     public String getNombre() {
         return this.nombre;
     }
@@ -70,8 +67,7 @@ public class Propietario  implements java.io.Serializable {
         this.nombre = nombre;
     }
 
-    
-    @Column(name="dni", nullable=false, length=45)
+        @Column(name="dni", nullable=false, length=45)
     public String getDni() {
         return this.dni;
     }
@@ -88,9 +84,6 @@ public class Propietario  implements java.io.Serializable {
     public void setInmuebles(Set<Inmueble> inmuebles) {
         this.inmuebles = inmuebles;
     }
-
-
-
 
 }
 

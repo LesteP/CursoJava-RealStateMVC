@@ -25,11 +25,11 @@ import org.hibernate.annotations.NamedQuery;
     ,catalog="teide2014"
 )
 @NamedQueries({
-     @NamedQuery(name="Inmueble.buscador", query="from Inmueble i where i.direccion like :texto"),
-     @NamedQuery(name = "Inmueble.buscadorPrecio", query = "from Inmueble i where i.precio= :precioBuscar")
+     @NamedQuery(name="Inmueble.buscador",
+    		 	 query="from Inmueble i where i.direccion like :texto"),
+     @NamedQuery(name = "Inmueble.buscadorPrecio",
+     			 query = "from Inmueble i where i.precio= :precioBuscar")
 })
-
-
 public class Inmueble  implements java.io.Serializable {
 
 
@@ -42,8 +42,7 @@ public class Inmueble  implements java.io.Serializable {
     public Inmueble() {
     }
 
-	
-    public Inmueble(Propietario propietario, String direccion, double precio) {
+	    public Inmueble(Propietario propietario, String direccion, double precio) {
         this.propietario = propietario;
         this.direccion = direccion;
         this.precio = precio;
